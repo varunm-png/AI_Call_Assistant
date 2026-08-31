@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  DEV-ONLY: allows plain HTTP (cleartext) so the app can reach a local
+  FastAPI backend (e.g. http://10.0.2.2:8000 on an emulator, or your PC's
+  LAN IP on a physical phone) without needing TLS.
+
+  Before any real/production release, delete this file, remove the
+  android:networkSecurityConfig line from AndroidManifest.xml, deploy the
+  backend behind HTTPS, and use that https:// URL instead.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
